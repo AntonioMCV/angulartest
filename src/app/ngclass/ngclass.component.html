@@ -1,0 +1,66 @@
+<h1 class="bg-dark text-white text-center my-4 py-4">[ngClass] activo = {{activo}}; fondo = {{fondo}}</h1>
+<p class="alert alert-secondary">
+  Podemos usar "<b>[ngClass]</b>" para poder tener clases dinamicas en nuestro HTML. Para ello nos servimos
+  de unos botones superiores que se ocupen de ir cambiando la varibale "<b>activo</b>" que se encargaran de mostrar
+  el primer parrafo o el segundo. Los botones inferiores se encargaran de ir cambiando la variable "<b>fondo</b>" que se encargaran
+  de cambiar el color de fondo de los parrafos.
+</p>
+<div class="my-3">
+  <button class="btn btn-warning" (click)="activo='primero'">Primero</button>
+  <button class="btn btn-warning ml-3" (click)="activo='segundo'">Segundo</button>
+</div>
+
+<p class="text-info d-none" [ngClass]="{
+        'd-block':activo=='primero',
+        'bg-dark':fondo=='dark',
+        'bg-white':fondo=='white'
+    }">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque aliquid ipsam cumque animi non nulla vitae,
+  assumenda ad architecto aut exercitationem vero aspernatur quia autem, facere illo dolorum dignissimos?
+</p>
+<p class="text-danger d-none" [ngClass]="{
+        'd-block':activo=='segundo',
+        'bg-dark':fondo=='dark',
+        'bg-white':fondo=='white'
+    }">
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id possimus totam,
+  blanditiis vero reprehenderit excepturi odit optio fugiat rerum. Optio laboriosam unde, alias minima hic id
+  velit
+  est? Animi, reprehenderit.
+</p>
+
+
+
+<button class="btn btn-dark" (click)="fondo='dark'">Background Dark</button>
+<button class="btn btn-white ml-3 border border-dark" (click)="fondo='white'">Background white</button>
+
+<pre class="border border-dark bg-light my-5">
+
+  &lt;div class="my-3"&gt;
+    &lt;button class="btn btn-warning" <b>(click)="activo='primero'"</b>&gt;Primero&lt;/button&gt;
+    &lt;button class="btn btn-warning ml-3" <b>(click)="activo='segundo'"</b>&gt;Segundo&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;p class="text-info d-none" <b>[ngClass]="
+          'd-block':activo=='primero',
+          'bg-dark':fondo=='dark',
+          'bg-white':fondo=='white'
+      "</b>&gt;
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque aliquid ipsam cumque animi non nulla vitae,
+    assumenda ad architecto aut exercitationem vero aspernatur quia autem, facere illo dolorum dignissimos?
+  &lt;/p&gt;
+  &lt;p class="text-danger d-none" <b>[ngClass]="
+          'd-block':activo=='segundo',
+          'bg-dark':fondo=='dark',
+          'bg-white':fondo=='white'
+      "</b>&gt;
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id possimus totam,
+    blanditiis vero reprehenderit excepturi odit optio fugiat rerum. Optio laboriosam unde, alias minima hic id
+    velit
+    est? Animi, reprehenderit.
+  &lt;/p&gt;
+
+  &lt;button class="btn btn-dark" <b>(click)="fondo='dark'"</b>&gt;Background Dark&lt;/button&gt;
+  &lt;button class="btn btn-white ml-3 border border-dark" <b>(click)="fondo='white'"</b>&gt;Background white&lt;/button&gt;
+
+</pre>

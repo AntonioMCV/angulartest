@@ -1,0 +1,37 @@
+<h1 class="bg-dark text-white text-center my-4 py-4">*ngIf show = {{show}}</h1>
+<p class="alert alert-secondary">Usamos el condicional de Angular con <b>"*ngIf"</b> en el tag que queramos, para que cuando se cumpla la condicion indicada
+se muestre. Tambien tenemos la opcion de aplicarle un else para que pinte un tag alternativo al cual tenemos que indicarle con un nomnbre
+para que pueda identificarlo.</p>
+<button class="btn btn-warning mb-3" (click)="show=!show">Action</button>
+
+<p class="text-info" *ngIf="show; else showDos">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque aliquid ipsam cumque animi non nulla vitae,
+  assumenda ad architecto aut exercitationem vero aspernatur quia autem, facere illo dolorum dignissimos?
+</p>
+<ng-template #showDos>
+  <p class="text-danger">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id possimus totam,
+    blanditiis vero reprehenderit excepturi odit optio fugiat rerum. Optio laboriosam unde, alias minima hic id
+    velit
+    est? Animi, reprehenderit.
+  </p>
+</ng-template>
+<pre class="border border-dark bg-light my-5">
+
+   &lt;button class="btn btn-warning mb-3" <b>(click)="show=!show"</b>&gt;Action &lt;/button&gt;
+
+   &lt;p class="text-info" <b>*ngIf="show; else showDos"</b>&gt;
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque aliquid ipsam cumque animi non nulla vitae,
+    assumenda ad architecto aut exercitationem vero aspernatur quia autem, facere illo dolorum dignissimos?
+   &lt;/p&gt;
+
+    <b>&lt;ng-template #showDos&gt;</b>
+     &lt;p class="text-danger"&gt;
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id possimus totam,
+      blanditiis vero reprehenderit excepturi odit optio fugiat rerum. Optio laboriosam unde, alias minima hic id
+      velit
+      est? Animi, reprehenderit.
+     &lt;/p&gt;
+    <b>&lt;/ng-template&gt;</b>
+
+</pre>
