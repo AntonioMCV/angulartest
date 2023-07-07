@@ -1,6 +1,8 @@
 # MyApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9. and NodeJS 8.10.0
+So go to the NodeJS official page to use the correct version. if you have NVM you can use "nvm install 8.10.0" and then "nvm use 8.10.8".
+To install the ng version use "npm install -g @angular/cli@7.3.9" 
 
 ## Development server
 
