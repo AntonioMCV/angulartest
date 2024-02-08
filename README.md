@@ -1,6 +1,6 @@
 # MyApp
 
-To see the application visit the [public web](https://github.com/AntonioMCV/angulartest/settings/pages)
+To see the application visit the [public web](https://antoniomcv.github.io/angulartest/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9. and NodeJS 8.10.0
 So go to the NodeJS official page to use the correct version. if you have NVM you can use `nvm install 8.10.0` and then `nvm use 8.10.8`.
